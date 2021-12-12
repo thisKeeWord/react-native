@@ -14,7 +14,6 @@ const ListScreen = () => {
     { name: 'Friend #9', age: 20 },
   ]
 
-
   return (
     <FlatList
       data={friends}

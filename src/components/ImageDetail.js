@@ -1,10 +1,13 @@
 import React from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, Image } from 'react-native'
 import PropTypes from 'prop-types'
 
 const ImageDetail = (props) => {
   return (
-    <Text>{props.title}</Text>
+    <View>
+      <Image source={props.imageSource} />
+      <Text>{props.title}</Text>
+    </View>
   )
 }
 
@@ -17,5 +20,7 @@ const styles = StyleSheet.create({
 export default ImageDetail
 
 ImageDetail.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  // imageSouce should be the evaluated result from `require(file)`
+  imageSource: PropTypes.any,
 }
